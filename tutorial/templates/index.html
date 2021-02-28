@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>성적 확인</h1>
+    <p>input name</p>
+    <ul>
+        {% for key, value in template_students | dictsort %}
+            <li><a href="/student/{{key}}">{{value['name']}}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
